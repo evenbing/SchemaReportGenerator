@@ -165,7 +165,7 @@ namespace CMS.SchemaManager
                     schemaClassDef = schemaClassDef.Replace("<SCHEMA_XML_ROOT_NAME>", xmlRootName);
                     schemaClassDef = schemaClassDef.Replace("<DATA_MEMBER_LIST>", dataMembers.ToString());
                     schemaClassDef = schemaClassDef.Replace("<CREATE_DATE>", DateTime.Now.ToShortTimeString());
-                    schemaClassDef = schemaClassDef.Replace("<AUOTHOR_NAME>", author);
+                    schemaClassDef = schemaClassDef.Replace("<AUTHOR_NAME>", author);
                     schemaClassDef = schemaClassDef.Replace("<NAMESPACE_NAME>", namespace_string);
                     if (isGenerateDataModel == "1")
                     {
