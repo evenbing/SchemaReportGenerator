@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<schema-parser>
+  <html-format>
+    <![CDATA[
+              <h1>{0}</h1>
+              <b>Schema Name:</b>{1}<br />
+              <b>Description:</b>{2}<br />
+              <b>Schema Type:</b>{3}<br />
+              <b>Root Element Name:</b>{4}<br />
+              <b>TCM URI:</b>{5}<br />
+              <table style="<VISIBILITY>" border="1px">
+                <tr>
+                  <th>Field Name</th>
+                  <th>Description</th>
+                  <th>Field Type</th>
+                  <th>Mandatory Field (Y/ N)</th>
+                  <th>Max. length validation</th>
+                  <th>Additional Information</th>
+                </tr>
+                <FIELD_DETAILS>
+              </table>
+    ]]>
+  </html-format>
+  <datamodel-format>
+    <![CDATA[
+             /*
+             * File Name    : <SCHEMA_NAME_PASCAL_CASE>
+             * Author       : <AUOTHOR_NAME>
+             * Date Created : <CREATE_DATE>
+             * 
+             */
+              using System;
+              using System.Runtime.Serialization;
+              using System.Xml.Serialization;
+
+              namespace <NAMESPACE_NAME>
+              {
+
+                  /// <summary>
+                  /// Data Contract corresponding to the Schema - <SCHEMA_NAME_PASCAL_CASE>
+                  /// </summary>
+                  [DataContract]
+                  [Serializable]
+                  [XmlRoot('<SCHEMA_XML_ROOT_NAME>')]
+                  public class <SCHEMA_NAME_PASCAL_CASE>
+                  {
+                      <DATA_MEMBER_LIST>
+                  }
+              }
+    ]]>
+  </datamodel-format>
+  <author>Pankaj Gaur</author>
+  <namespace>SchemaParser.DataContract</namespace>
+  <schemadef-filepath>SchemaDef\</schemadef-filepath>
+  <datamodel-filepath>DataModels\</datamodel-filepath>
+  <generate-datamodel>1</generate-datamodel> 
+  <coreservice-url>http://yourCMSURL/webservices/CoreService2013.svc/wsHttp</coreservice-url>
+  <publication-uri>tcm:0-3-1</publication-uri>
+</schema-parser>
